@@ -57,6 +57,8 @@ Elastic公式から提供されているrpmパッケージを利用した場合�
 * ログファイルの出力先：/var/log/Elasticsearch
 * 基本的なファイルの配置先：/opt/Elasticsearch
 
+#@# 5系ではRPMパッケージで入れた場合、/opt配下にelasticsearchディレクトリは出来上がらない。
+
 === ちゃんと運用もしたい場合（debパッケージを利用するLinux）：debパッケージ
 こちらも2のやり方と同様です。違いはUbuntu系のLinux用パッケージを使うか、
 RedHat、OpenSuSE系のLinux用パッケージを使うかだけです。
