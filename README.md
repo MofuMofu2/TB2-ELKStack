@@ -5,11 +5,20 @@
 ## typoとか見つけちゃったりしたら
 issueを切ってください
 
-## フォルダ構成
-Re:VIEWでビルドする予定なので、おもにこの辺をいじるよ
-* /text/config.yml：ビルド時の設定とか
-* /text/style.css：見た目系の設定とか
-* /text/test.re：本文
+## フォルダ構成（タイトル）
+### はじめに
+  - text/introduction.re（はじめに）
+### 本文（次の並びで記載）
+  - text/Elastic_Stack.re（Elastic Stackって何？）
+  - text/install.re（環境構築（各ツールのインストール））
+  - text/logstash_csv.re（データを集めて可視化しよう（Twitterのログ編））
+  - text/kibana_discover.re（Kibanaを使ったデータの閲覧）
+  - text/kibana_visualize.re（グラフの作成）
+  - text/kibana_dashboard.re（Kibanaを使ったデータの閲覧）
+  - text/end.re（終わりに）
+
+### 付録
+  - editor.re（本製作に関わったフレンズ）
 
 ## Re:VIEWの記法（今使ってるもの）
 参考：
