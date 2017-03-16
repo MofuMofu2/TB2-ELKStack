@@ -20,6 +20,8 @@ Elasticsearch→Logstash→Kibanaの順にインストールすることをお�
   /Users/mallow/review/text/text/images/data.png
 //}
 
+#@# 上図について、KibanaとElasticsearchの矢印の向きは逆の方が良い。KibanaからElasticsearchにSearchのAPIを発呼しているので。
+
 また、Kibanaは起動前にElasticsearchのURLを指定する必要があるため、Elasticsearchがセットアップされていないと
 そもそも動作しません。今回は各ツールごとに完結できる動作確認方法を取りますが、万が一に備えるという意味では
 図X.Xのようにデータの連携先→連携元→データ閲覧ツールという流れでセットアップした方が良いでしょう。
