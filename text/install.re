@@ -1,4 +1,4 @@
-= 環境構築（各ツールのインストール）
+= 環境構築
 
 //lead{
 「よーし、ELKがどんなものかだいたい理解できたから、インストールしてみよ！
@@ -12,7 +12,7 @@
 == インストールの順番
 インストールの前に、どのツールからインストールするかを決めておきましょう。ELKのデータの流れを考えると、
 Elasticsearch→Logstash→Kibanaの順にインストールすることをお勧めします。
-理由は図X.Xにあるように、Logstashで取りこんだデータをElasticsearchに連携するため
+理由は @<img>{data}にあるように、Logstashで取りこんだデータをElasticsearchに連携するため
 先にデータの連携先をセットアップしておかないと正しく動作確認ができない可能性があるためです。
 
 //image[data][データ連携の流れ]{
@@ -62,7 +62,7 @@ Elastic公式から提供されているrpmパッケージを利用した場合�
 * 基本的なファイルの配置先：/opt/Elasticsearch
 
 === ちゃんと運用もしたい場合（debパッケージを利用するLinux）：debパッケージ
-こちらも2のやり方と同様です。違いはUbuntu系のLinux用パッケージを使うか、
+こちらもrpmパッケージを利用する方法と同様です。違いはUbuntu系のLinux用パッケージを使うか、
 RedHat、OpenSuSE系のLinux用パッケージを使うかだけです。
 
 === とにかく使ってみたい場合かつ、Docker実行環境がある場合：Dockerコンテナ
@@ -82,8 +82,8 @@ Windowsの場合、インストール方法はzipファイル一択となりま�
 インストールすることもできますが、Elastic公式ではサポートされていないようなので、
 今回はインストール方法から対象外としています。
 
-他の方が検証されているログを見る限り、brewコマンドでインストールした場合はtar.gzパッケージを解凍して
-インストールしているように見えるため、公式の最新ファイルをダウンロードしてインストールするのと特に変わらないと思います。
+他の方が検証されているブログなどを見る限り、brewコマンドでインストールした場合はtar.gzパッケージを解凍して
+インストールしているようです。公式の最新ファイルをダウンロードしてインストールするのと変わらないため、
 好みで選択すると良いでしょう。
 
 == zipファイルを用いたインストール（Elasticsearch）
@@ -269,6 +269,7 @@ Elasticsearchをインストールする際に作成したディレクトリに�
 ディレクトリ構成は一例です。
 
 //cmd{
+# 必要であれば
 unzip logstash-5.2.2
 //}
 
@@ -316,8 +317,6 @@ $ /bin/logstash -f logstash.conf
 文字列がそのまま返り値として出力された場合、正しくセットアップできています。
 
 //cmd{
-logstash-5.2.2 mofumofu$ /bin/logstash -f logstash.conf
--bash: /bin/logstash: No such file or directory
 logstash-5.2.2 mofumofu$ bin/logstash -f logstash.conf
 Sending Logstash's logs to /Users/mallow/ELK_Stack/logstash-5.2.2/logs which is now configured via log4j2.properties
 [2017-03-05T16:22:40,422][INFO ][logstash.setting.writabledirectory] Creating directory {:setting=>"path.queue", :path=>"/Users/mallow/ELK_Stack/logstash-5.2.2/data/queue"}
@@ -362,6 +361,7 @@ OSの種類によってzipファイルが異なるため、注意が必要です
 Elasticsearchをインストールする際に作成したディレクトリに、ダウンロードしたzipファイルを解凍します。
 
 //cmd{
+# 必要であれば
 unzip kibana-5.2.2-darwin-x86_64.tar.gz
 //}
 
