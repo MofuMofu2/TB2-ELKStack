@@ -326,14 +326,17 @@ unzip kibana-5.2.2-darwin-x86_64.tar.gz
 ==={kibana-yml} kibana.ymlの編集
 
 前にも述べた通り、KibanaはElasticsearchからデータを取得するためElasticsearchのURLを指定する必要があります。
-kibana.yml内にURLを指定する箇所があるのでそちらを記述しましょう。下に記載している場所を編集すれば良いです。
+kibana.yml内にURLを指定する箇所があるのでそちらを記述しましょう。kibana.ymlのパスは
+@<code>{/フォルダ名/kibana-5.2.2-linux-x86_64/config/kibana.yml}です@<fn>{kibana.yml}。
+
+//footnote[kibana.yml][zipファイルを解凍してインストールした場合はこちらのパスになりますが、パッケージインストールの場合ディレクトリ階層が異なります。]
 
 //cmd{
-# 前後は省略
+# 21行目の下にURLを追記
 --------------------------------------------------------------------
-# The URL of the Elasticsearch instance to use for all your queries.
-#Elasticsearch.url: "http://localhost:9200"
-Elasticsearch.url: "http://localhost:9200"
+20 # The URL of the Elasticsearch instance to use for all your queries.
+21 #Elasticsearch.url: "http://localhost:9200"
+   Elasticsearch.url: "http://localhost:9200"
 --------------------------------------------------------------------
 //}
 
