@@ -351,6 +351,9 @@ unzip kibana-5.2.2-darwin-x86_64.tar.gz
 kibana.yml内にURLを指定する箇所があるのでそちらを記述しましょう。kibana.ymlのパスは
 @<code>{/フォルダ名/kibana-5.2.2-linux-x86_64/config/kibana.yml}です@<fn>{kibana.yml}。
 
+KibanaはElasticsearchと連動して動くアプリケーションなので、
+@<tt>{kibana.yml}を編集するときはElasticsearchプロセスを停止しておいた方が良いでしょう。
+
 //footnote[kibana.yml][zipファイルを解凍してインストールした場合はこちらのパスになりますが、パッケージインストールの場合ディレクトリ階層が異なります。]
 
 //cmd{
