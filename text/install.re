@@ -29,6 +29,18 @@ Elasticsearch→Logstash→Kibanaの順にインストールすることをお�
   /Users/mallow/review/text/text/images/data.png
 //}
 
+== 事前準備
+
+Elasticsearch、Logstashの起動にはJava（バージョン8以上）が必要です。
+必要に応じてインストールしましょう。
+
+//cmd{
+$ java -version
+java version "1.8.0_45"
+Java(TM) SE Runtime Environment (build 1.8.0_45-b14)
+Java HotSpot(TM) 64-Bit Server VM (build 25.45-b02, mixed mode)
+//}
+
 == Elasticsearchのインストール
 先にも述べましたが、インストール方法は複数準備されています。導入の目的とご自身の環境に合わせて
 ベストなものを選択すると良いでしょう。
