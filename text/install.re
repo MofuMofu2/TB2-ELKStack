@@ -64,6 +64,7 @@ Elastic公式から提供されているrpmパッケージを利用した場合�
 RedHat、OpenSuSE系のLinux用パッケージを使うかだけです。
 
 #@# 上記の「2」はどこを指しているのか、もう少し明確に記載した方が良いのでは
+#@# RPMパッケージはRedHat系でRedHatやCentOS等、DEBパッケージはDebian系でDebianやUbuntuという表現が正確かと
 
 === とにかく使ってみたい場合かつ、Docker実行環境がある場合：Dockerコンテナ
 Elastic StackをDocker社が利用していることもあってか、Elastic公式からDockerイメージが提供されています。
