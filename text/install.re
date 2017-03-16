@@ -107,6 +107,28 @@ $ mkdir ELK_Stack
 $ unzip Elasticsearch-5.2.2
 //}
 
+=== メモリ使用率の変更（必要であれば）
+
+ElasticsearchはJavaで動くアプリなのですが、最大ヒープサイズ（Xms）は物理メモリの50%以下である必要があります。
+メモリが50%以上を超えてしまう場合、Elasticsearchプロセスが立ち上がりません。
+ヒープサイズは次の設定ファイルで設定します。
+
+//emlist[ヒープサイズの設定ファイル]{
+/elasticsearch-5.2.2/config/jvm.options
+//}
+
+@<code>{-Xms}は初期ヒープサイズの設定を行い、@<code>{-Xmx}では最大ヒープサイズの設定を行います。
+サーバの物理メモリが4GBであれば、2GBで設定しておくと良いでしょう。
+
+//emlist[ヒープサイズの設定]{
+$ sudo vim jvm.options
+
+ 19 # Xms represents the initial size of total heap space
+ 20 # Xmx represents the maximum size of total heap space
+ 21
+ 22 -Xms2g
+ 23 -Xmx2g
+//}
 
 === Elasticsearchの起動
 
