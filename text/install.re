@@ -260,7 +260,15 @@ output {
 ==={logstash-test} 動作確認
 
 @<tt>{/bin}下にある@<tt>{logstash}スクリプトから、Logstashを起動します。
-OSがWindowsの場合、同階層に@<tt>{logstash.bat}が配置されているのでそちらを起動しましょう。
+OSがWindowsの場合、同階層に@<tt>{logstash.bat}が配置されているのでそちらを起動します。
+
+Logstashの起動をコマンドで行う場合、次の通りに実行します。
+@<code>{-f}オプションで@<tt>{logstash.conf}の名前を指定します。
+
+//emlist[Logstashの起動]{
+$ /bin/logstash -f logstash.conf
+//}
+
 @<tt>{logstash.conf}にタイプミスがない場合、<@<tt>{"Logstash startup completed"}と出力されます。
 コマンドプロンプトに好きな文字列を打ち込んでみましょう。
 文字列がそのまま返り値として出力された場合、正しくセットアップできています。
