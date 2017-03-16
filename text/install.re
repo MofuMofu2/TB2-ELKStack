@@ -135,8 +135,16 @@ $ sudo vim jvm.options
 @<tt>{/bin}ディレクトリ下にある@<tt>{Elasticsearch}スクリプトを実行し、サービスを起動します。
 OSがWindowsの場合、@<tt>{Elasticsearch.bat}を実行します。
 
+起動コマンドは次の通りです。@<tt>{-d}オプションを利用すると、バックグラウンドで実行できます。
+
+//emlist[Elasticsearchの起動コマンド]{
+bin/elasticsearch
+# -dオプションでバックグラウンド実行
+bin/elasticsearch -d
+//}
+
 //cmd{
-$ Elasticsearch-5.2.2 mofumofu$ bin/Elasticsearch
+$ Elasticsearch-5.2.2 mofumofu$ bin/elasticsearch
 [2017-03-05T15:49:00,854][INFO ][o.e.n.Node               ] [] initializing ...
 [2017-03-05T15:49:01,004][INFO ][o.e.e.NodeEnvironment    ] [asgUjsK] using [1] data paths, mounts [[/ (/dev/disk1)]], net usable_space [123.8gb], net total_space [232.6gb], spins? [unknown], types [hfs]
 [2017-03-05T15:49:01,005][INFO ][o.e.e.NodeEnvironment    ] [asgUjsK] heap size [1.9gb], compressed ordinary object pointers [true]
@@ -367,7 +375,7 @@ KibanaはElasticsearchと連動して動くアプリケーションなので、
 
 ==={kibana-test} 動作確認
 
-/binフォルダ下にあるkibanaスクリプトから起動します。（Windowsはkibana.batから起動します。）
+/binフォルダ下にあるkibanaスクリプトから起動します。起動前にElasticsearchを起動しておいてください。（Windowsはkibana.batから起動します。）
 
 //cmd{
 kibana-5.2.2-darwin-x86_64 mofumofu$ bin/kibana
