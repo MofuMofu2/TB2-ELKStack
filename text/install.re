@@ -262,6 +262,8 @@ unzip logstash-5.2.2
 logstash-5.2.2 mofumofu$ touch logstash.conf
 //}
 
+#@# 上記はcdコマンドで遷移してなかったので、どこにディレクトリにいるのか気になった。
+
 次に、logstash.confを編集します。
 //cmd{
 # logstash.confの編集
