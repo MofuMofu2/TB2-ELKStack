@@ -497,7 +497,7 @@ filter{
 //emlist[コンフィグテストの例]{
 $ ELK_Stack/logstash-5.2.2/bin/logstash -f ELK_Stack/logstash-5.2.2/logstash.conf  -t
 Sending Logstash's logs to /Users/mofumofu/ELK_Stack/logstash-5.2.2/logs which is now configured via log4j2.properties
-[2017-03-12T10:50:00,519][FATAL][logstash.runner          ] The given configuration is invalid. Reason: Expected one of #, {, ,, ] at line 18, column 25 (byte 323) after filter{
+[2017-03-12T10:50:00,519][FATAL][logstash.runner] The given configuration is invalid. Reason: Expected one of #, {, ,, ] at line 18, column 25 (byte 323) after filter{
   csv{
     convert => {
       "column2" => "date_time"
