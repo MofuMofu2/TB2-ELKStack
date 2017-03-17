@@ -314,8 +314,13 @@ output{
 さらに、@<tt>{@timestamp}を見る限り、時間が明らかに実際のログの時間とずれています。
 もっというと@<tt>{message}の中のログは1つの情報ごとに分割したいですよね。
 @<b>{filter}を使ってログの中身を整形しましょう。
+
 プラグインの一覧は@<href>{https://www.elastic.co/guide/en/logstash/current/filter-plugins.html}に
 情報がまとまっています。
+@<tt>{current}は最新バージョンのURLリンクです。利用するLogstashのバージョンが最新版でない場合、@<tt>{current}をバージョン名に変更してください。
+例えばLogstashのバージョンが@<b>{5.2}の場合、@<href>{https://www.elastic.co/guide/en/logstash/5.2/filter-plugins.html}のように指定します@<fn>{url_version}。
+
+//footnote[url_version][なんやかんや言って、サイト内でバージョン選択できます。心配することはないです。]
 
 === CSV形式のログを分割する
 CSV形式のログを分割するためには@<b>{csv}プラグインを利用します。
