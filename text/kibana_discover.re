@@ -56,6 +56,8 @@ Timelionでは1つの画面に線グラフと棒グラフを両立させるこ�
 Elasticsearchからデータを取得するためには、curlコマンドでGETをElasticsearchに投げます。
 Dev ToolsではElasticsearchに直接クエリを投げることができます。
 
+#@# DevToolsはOSにログインしなくてもKibanaからクエリを送れるというのが特徴なので、そこを分かるように表現してほしいかな
+
 //image[kibana_DevTools][DevTools画面の例]{
   画面キャプチャ
 //}
