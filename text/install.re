@@ -204,6 +204,8 @@ Elasticsearchと同様です。
 * ログファイルの出力先：/var/log/logstash
 * 基本的なファイルの配置先：/opt/logstash/
 
+#@# 5系ではRPMパッケージで入れた場合、/opt配下にlogstashディレクトリは出来上がらない。
+
 ==={logstash-deb} ちゃんと運用もしたい場合（debパッケージを利用するLinux）：debパッケージ
 こちらもElasticsearchと同様です。
 
