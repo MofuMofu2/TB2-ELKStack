@@ -521,6 +521,8 @@ Sending Logstash's logs to /Users/mofumofu/ELK_Stack/logstash-5.2.2/logs which i
 
 //}
 
+#@# 印刷すると上記エラーメッセージが切れてしまっているので、何がおかしいのか良く分からない。
+
 == 今回作成したlogstash.conf
 章の最後に、今回作成した@<tt>{logstash.conf}を記載します。
 @<tt>{column2}はdateフィルタで@<tt>{@timestamp}に変換後は不要なカラムと
