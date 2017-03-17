@@ -87,6 +87,8 @@ input部分では情報の取得元ごとにプラグインが提供されてい
 利用できるプラグインの種類は@<href>{https://www.elastic.co/guide/en/logstash/current/input-plugins.html}で
 確認することができます。
 
+#@# 利用出来るプラグインの一覧のパスは最新バージョン用のパスなので、5.2用のプラグインを示すのであればcurrentのところを5.2にするべき。
+
 @<tt>{logstash.conf}の記載はJSON形式で行います。
 inputプラグインであれば、次のように記載します。
 
