@@ -219,6 +219,8 @@ LogstashはRubyで作成されていますが、起動にJavaを必要としま�
 ==={logstash-com} Puppet、Chef、Ansibleの実行環境がある場合：Githubのレシピを利用
 Elastic公式から各ツールのレシピが提供されているので、Githubからクローンして利用することも可能です。
 
+#@# 「Elastic公式から」という表現に違和感あり。「公式にElasticから」が正しい？
+
 ==={logstash-win} Windows/Mac上に構築する場合：zipファイル
 Windowsの場合、インストール方法はzipファイル一択となります。Macはbrewコマンドを用いることで
 インストールすることもできますが、Elastic公式ではサポートされていないようなので、
