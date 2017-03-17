@@ -270,7 +270,7 @@ unzip logstash-5.2.2
 ファイルの取り込み元などを指定します。まずは動作確認用に次のコードをconfファイルへ記述します。
 
 //cmd{
-# logstash.confの作成
+# zipファイルを展開して作成されたディレクトリ内でlogstash.confを作成
 logstash-5.2.2 mofumofu$ touch logstash.conf
 //}
 
