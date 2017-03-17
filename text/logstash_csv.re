@@ -331,6 +331,8 @@ output{
 プラグインの一覧は@<href>{https://www.elastic.co/guide/en/logstash/current/filter-plugins.html}に
 情報がまとまっています。
 
+#@# 「1つの情報ごとに」よりも「CSVのカラム単位」で方が伝わるかな、、
+
 === CSV形式のログを分割する
 CSV形式のログを分割するためには@<b>{csv}プラグインを利用します。
 必須項目はありません。指定は@<code>{csv {\} }というように行います。
