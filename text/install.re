@@ -220,11 +220,6 @@ LogstashもElasticsearchと同様、インストール方式を選択するこ�
 こちらもサービス起動用コマンドの存在や、ディレクトリ構成が自動で割り当てられる点なども
 Elasticsearchと同様です。
 
-例）
-* コンフィグファイルの配置先：/etc/logstash/
-* ログファイルの出力先：/var/log/logstash
-* 基本的なファイルの配置先：/opt/logstash/
-
 ==={logstash-deb} ちゃんと運用もしたい場合（debパッケージを利用するLinux）：debパッケージ
 こちらもElasticsearchと同様です。
 
