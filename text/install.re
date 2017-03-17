@@ -56,11 +56,6 @@ Java HotSpot(TM) 64-Bit Server VM (build 25.45-b02, mixed mode)
 また、各種設定ファイルやディレクトリ構造はLinuxのディレクトリ形式に合わせて構築されます。
 運用を検討している場合は、初めからこちらのやり方を取っておけば環境の再構築を防ぐことができます。
 
-例）
-* コンフィグファイルの配置先：/etc/Elasticsearch/
-* ログファイルの出力先：/var/log/Elasticsearch
-* 基本的なファイルの配置先：/opt/Elasticsearch
-
 === ちゃんと運用もしたい場合（debパッケージを利用するLinux）：debパッケージ
 こちらもrpmパッケージを利用する方法と同様です。違いはUbuntu系のLinux用パッケージを使うか、
 RedHat、OpenSuSE系のLinux用パッケージを使うかだけです。
