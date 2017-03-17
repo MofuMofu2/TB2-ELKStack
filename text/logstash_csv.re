@@ -529,6 +529,8 @@ Sending Logstash's logs to /Users/mofumofu/ELK_Stack/logstash-5.2.2/logs which i
 なるため、削除しました。そのほかにも余計な情報は極力落とすようにしています。
 また、コメントアウトは@<code>{# （半角スペース）}で行います。
 
+#@# 「章の最後に」よりも「本章の最後に」が良いのでは。
+
 //emlist[作成したlogstash.conf]{
 input{
   file{
