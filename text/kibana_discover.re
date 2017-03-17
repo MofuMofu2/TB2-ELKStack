@@ -50,6 +50,8 @@ Timelionでは1つの画面に線グラフと棒グラフを両立させるこ�
 そちらのグラフと同じ画面です。
 今回はデータ種別がテキストと日付しかないため扱いません。
 
+#@# 「Tile map」ではなく「Time series」ですよね
+
 === Dev Tools：Elasticsearch用のクエリをテストする
 Elasticsearchからデータを取得するためには、curlコマンドでGETをElasticsearchに投げます。
 Dev ToolsではElasticsearchに直接クエリを投げることができます。
