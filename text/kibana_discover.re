@@ -112,6 +112,8 @@ Kibanaで利用するindexを指定してあげないと、どの情報を出せ
 何もない場合、@<tt>{Not found}画面が表示されます。データがある場合は
 X軸：時間・Y軸：データ件数の棒グラフと、実際にElasticsearchに取り込みされたデータが表示されます。
 
+#@# 「Not fonud」ではなく正しくは「Not results found」
+
 //image[kibana_Dashboard_Notfound][Elasticsearchにデータがない場合のDashboard画面]{
   キャプチャを貼る
 //}
