@@ -266,6 +266,8 @@ fieldとは、データベースでのカラムに相当します。textはカ�
 カラムの中にデータを入れるのと同じように、field内に実際のデータ（@<tt>{text})を保持します。
 このfieldの集まりを@<tt>{index}といいます。
 
+#@# fieldの説明はありますがIndexの説明はしませんか。「RDBで言うところのTableだよ」的な。
+
 デフォルトのindex名は@<tt>{"logstash-%{+YYYY.MM.dd\}"}です。
 @<tt>{elasticsearch}プラグインの@<tt>{index}を用いることでindex名を変更することができます。
 
