@@ -51,7 +51,9 @@ Vertical bar chart  棒グラフ
 fieldの中にあるカラムが何件あるか、数を表示することができます。
 イメージとしては簡易型のExcelが近いです。
 データはCSV形式でダウンロードすることができます。ただし、文字コードはUTF-8なので
-Excelで開くと文字化けします。
+Excelで開くと2byte文字は文字化けします@<fn>{byte}。
+
+//footnote[byte][日本語の文字コードの闇の深さを感じますね…。]
 
 //image[kibana_dataTable][Data table]{
  キャプチャを貼る
