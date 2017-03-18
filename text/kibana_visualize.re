@@ -61,7 +61,10 @@ Excelで開くと2byte文字は文字化けします@<fn>{byte}。
 
 === Heartmap chart
 心電図のように、指定したデータの出力感覚を表示することができます。
-データの出力感覚ごとにKibanaが自動で色分けをしてくれます。
+データの出力感覚ごとにKibanaが自動で色分けをしてくれます@<fn>{Heartmap}。
+
+//footnote[Heartmap][この本はモノクロ印刷のため、あまり特徴がわかりにくいと思います。今回は画面の紹介のみに留めますが、実際のグラフはGoogle先生に伺うとイメージつくはずです。]
+
 //image[kibana_heartmapChart][Heartmap chart]{
  キャプチャを貼る
 //}
