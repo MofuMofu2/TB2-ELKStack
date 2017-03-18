@@ -315,7 +315,7 @@ output{
 そのまま公開するのも気が引けます。
 
 さらに、@<tt>{@timestamp}を見る限り、時間が明らかに実際のログの時間とずれています。
-もっというと@<tt>{message}の中のログは1つの情報ごとに分割したいですよね。
+もっというと@<tt>{message}の中のログは1つの情報ごとに分割したいですよね（今回はCSVのカラム単位に分割したいです）。
 @<b>{filter}を使ってログの中身を整形しましょう。
 
 プラグインの一覧は@<href>{https://www.elastic.co/guide/en/logstash/current/filter-plugins.html}に
