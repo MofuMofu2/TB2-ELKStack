@@ -97,7 +97,7 @@ Kibanaで利用するindexを指定してあげないと、どの情報を出せ
 //}
 
 デフォルトは直近15分の間でElasticsearch内にあるデータが表示されます。データが
-何もない場合、@<tt>{Not found}画面が表示されます。データがある場合は
+何もない場合、@<tt>{Not results found}画面が表示されます。データがある場合は
 X軸：時間・Y軸：データ件数の棒グラフと、実際にElasticsearchに取り込みされたデータが表示されます。
 
 //image[kibana_Dashboard_Notfound][Elasticsearchにデータがない場合のDiscover画面]{
