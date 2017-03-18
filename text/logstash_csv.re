@@ -513,7 +513,7 @@ Sending Logstash's logs to /Users/mofumofu/ELK_Stack/logstash-5.2.2/logs which i
 //}
 
 == 今回作成したlogstash.conf
-章の最後に、今回作成した@<tt>{logstash.conf}を記載します。
+補足となりますが、今回作成した@<tt>{logstash.conf}を記載します。
 @<tt>{column2}はdateフィルタで@<tt>{@timestamp}に変換後は不要なカラムと
 なるため、削除しました。そのほかにも余計な情報は極力落とすようにしています。
 また、コメントアウトは@<code>{# （半角スペース）}で行います。
