@@ -82,7 +82,7 @@ outputは、ログをどこに送るか指定する部分です。
 
 input部分では情報の取得元ごとにプラグインが提供されています。
 今回はファイルを取得するため、@<b>{file}プラグインを使います。
-利用できるプラグインの種類は@<href>{https://www.elastic.co/guide/en/logstash/current/input-plugins.html}で
+利用できるプラグインの種類は@<href>{https://www.elastic.co/guide/en/logstash/5.2/input-plugins.html}で
 確認できます。
 
 @<tt>{logstash.conf}の記載はJSON形式で行います。
@@ -320,7 +320,8 @@ output{
 
 プラグインの一覧は@<href>{https://www.elastic.co/guide/en/logstash/current/filter-plugins.html}に
 情報がまとまっています。
-@<tt>{current}は最新バージョンのURLリンクです。利用するLogstashのバージョンが最新版でない場合、@<tt>{current}をバージョン名に変更してください。
+
+ちなみ、@<tt>{current}は最新バージョンのURLリンクです。利用するLogstashのバージョンが最新版でない場合、@<tt>{current}をバージョン名に変更してください。
 例えばLogstashのバージョンが@<b>{5.2}の場合、@<href>{https://www.elastic.co/guide/en/logstash/5.2/filter-plugins.html}のように指定します@<fn>{url_version}。
 
 //footnote[url_version][なんやかんや言って、サイト内でバージョン選択できます。心配することはないです。]
