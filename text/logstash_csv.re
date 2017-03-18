@@ -366,7 +366,7 @@ output{
 === カラムのデータ型を変更する
 @<b>{convert}を使うと、@<tt>{column1}、@<tt>{column2}（以下略）内のデータ型を指定できます。
 @<code>{convert => { "column1" => "変更したい型" \} }のように記載します。変更できる型は
-@<herf>{https://www.elastic.co/guide/en/logstash/current/plugins-filters-csv.html#plugins-filters-csv-convert}を
+@<href>{https://www.elastic.co/guide/en/logstash/current/plugins-filters-csv.html#plugins-filters-csv-convert}を
 参照してください。
 
 今回はcolumn2の中に日付と時刻が記載されているため、column2のみ型を変更します。
