@@ -116,7 +116,7 @@ X軸：時間・Y軸：データ件数の棒グラフと、実際にElasticsearc
 この@<tt>{Insurance}は直近500件分のログを分析し、各fieldに入っているデータがどのくらい同じなのか
 割合で示すことができます。
 
-//image[kibana_Dashboard_Insurance][Insurance]{
+//image[kibana_Dashboard_Insurance][Insurance][scale=0.5]{
   キャプチャを貼る
 //}
 
@@ -207,7 +207,7 @@ field名@<tt>{tags}のログが@<tt>{CSV}に一致するかつ、field名@<tt>{_
 Discover画面の右上を見て下さい。時計マークの隣に@<tt>{"Last 15 minutes"}と記載されています。
 つまり、今Kibanaに表示されているログは全て過去15分間のログのみとなります。
 
-//image[kibana_time][Kibanaで表示しているログの検索期間]{
+//image[kibana_time][Kibanaで表示しているログの検索期間][scale=0.4]{
   キャプチャを貼る
 //}
 
@@ -256,7 +256,7 @@ Discover画面の右上を見て下さい。時計マークの隣に@<tt>{"Last 
 画面右上の@<b>{Save}アイコンをクリックすると、名前を入れる欄が出てきます。
 <tt>{New Saved Search}に好きな名前を入れて@<tt>{Save}ボタンを押しましょう。
 
-//image[kibana_saveSearchPattern_name][保存名の指定]{
+//image[kibana_saveSearchPattern_name][保存名の指定][scale=0.4]{
   キャプチャを貼る
 //}
 
