@@ -355,8 +355,4 @@ KibanaはElasticsearchと連動して動くアプリケーションなので、
 kibana-5.2.2-darwin-x86_64 mofumofu$ bin/kibana
 //}
 
-起動後、ブラウザに@<href>{http://localhost:5601}と入力します。図X.Xのような画面が見えていればインストールは完了です。
-
-//image[kibana_setup][Kibanaの画面]{
-/Usersmofumofu/review/text/text/images/kibana_setup.png
-//}
+起動後、ブラウザに@<href>{http://localhost:5601}と入力します。Kibanaの画面が見えていればインストールは完了です。
