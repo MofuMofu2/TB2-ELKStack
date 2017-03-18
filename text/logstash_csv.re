@@ -130,10 +130,9 @@ Logstashの起動は先ほどと同じように@<tt>{/bin}配下にある起動�
 
 //cmd{
 $ logstash-5.2.2/bin/logstash -f logstash-5.2.2/logstash.conf
-Sending Logstash's logs to /Users/mofumofu/ELK_Stack/logstash-5.2.2/logs which is now configured via log4j2.properties
-[2017-03-11T20:31:56,188][INFO ][logstash.pipeline        ] Starting pipeline {"id"=>"main", "pipeline.workers"=>4, "pipeline.batch.size"=>125, "pipeline.batch.delay"=>5, "pipeline.max_inflight"=>500}
-[2017-03-11T20:31:56,421][INFO ][logstash.pipeline        ] Pipeline main started
-[2017-03-11T20:31:56,513][INFO ][logstash.agent           ] Successfully started Logstash API endpoint {:port=>9600}
+-返り値は省略------------------------------------------------------
+Pipeline main started
+Successfully started Logstash API endpoint {:port=>9600}
 //}
 
 === ファイルの読み込み位置を指定する
@@ -199,17 +198,8 @@ output{
 この状態でLogstashを起動すると、CSVのデータが標準出力されます。
 //cmd{
   $ logstash-5.2.2/bin/logstash -f logstash-5.2.2/logstash.conf
-  Sending Logstash's logs to /Users/mofumofu/ELK_Stack/logstash-5.2.2/logs which is now configured via log4j2.properties
-  [2017-03-11T20:31:56,188][INFO ][logstash.pipeline        ] Starting pipeline {"id"=>"main", "pipeline.workers"=>4, "pipeline.batch.size"=>125, "pipeline.batch.delay"=>5, "pipeline.max_inflight"=>500}
-  [2017-03-11T20:31:56,421][INFO ][logstash.pipeline        ] Pipeline main started
-  [2017-03-11T20:31:56,513][INFO ][logstash.agent           ] Successfully started Logstash API endpoint {:port=>9600}
-  ^C[2017-03-11T20:46:29,527][WARN ][logstash.runner          ] SIGINT received. Shutting down the agent.
-  [2017-03-11T20:46:29,537][WARN ][logstash.agent           ] stopping pipeline {:id=>"main"}
-  $ logstash-5.2.2/bin/logstash -f logstash-5.2.2/logstash.conf
-  Sending Logstash's logs to /Users/mofumofu/ELK_Stack/logstash-5.2.2/logs which is now configured via log4j2.properties
-  [2017-03-11T22:07:14,824][INFO ][logstash.pipeline        ] Starting pipeline {"id"=>"main", "pipeline.workers"=>4, "pipeline.batch.size"=>125, "pipeline.batch.delay"=>5, "pipeline.max_inflight"=>500}
-  [2017-03-11T22:07:15,039][INFO ][logstash.pipeline        ] Pipeline main started
-  [2017-03-11T22:07:15,194][INFO ][logstash.agent           ] Successfully started Logstash API endpoint {:port=>9600}
+-返り値は省略------------------------------------------------------
+Successfully started Logstash API endpoint {:port=>9600}
   {
             "path" => "/Users/mofumofu/ELK_Stack/logs/froakie0021170311.csv",
       "@timestamp" => 2017-03-11T13:07:15.099Z,
@@ -490,8 +480,8 @@ filter{
 
 //emlist[コンフィグテストの例]{
 $ ELK_Stack/logstash-5.2.2/bin/logstash -f ELK_Stack/logstash-5.2.2/logstash.conf  -t
-Sending Logstash's logs to /Users/mofumofu/ELK_Stack/logstash-5.2.2/logs which is now configured via log4j2.properties
-[2017-03-12T10:50:00,519][FATAL][logstash.runner] The given configuration is invalid. Reason: Expected one of #, {, ,, ] at line 18, column 25 (byte 323) after filter{
+[2017-03-12T10:50:00,519][FATAL][logstash.runner] The given configuration is invalid.
+Reason: Expected one of #, {, ,, ] at line 18, column 25 (byte 323) after filter{
   csv{
     convert => {
       "column2" => "date_time"
