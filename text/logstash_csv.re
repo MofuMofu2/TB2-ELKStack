@@ -21,7 +21,7 @@ Twilogを登録してください。
 Twilogは直近200件分の過去ツイート情報しか取得できません。ログ数を増やすため、@<b>{過去ツイートの取得}から
 昔のツイートを全て取得しておきましょう。
 
-//image[Twilog_getlog][過去ツイートの取得]{
+//image[Twilog_getlog][過去ツイートの取得][scale=0.8]{
 
 //}
 
@@ -54,7 +54,7 @@ Logstashのデータ取得方法は@<tt>{logstash.conf}で設定します。
 inputは、ログをどこから取得するか決める部分です。
 ログの取得間隔や、Logstashサービス再開時の挙動を指定することも可能です。
 
-//image[logstash_config_input][logstash.conf（input）]{
+//image[logstash_config_input][logstash.conf（input）][scale=0.5]{
 /Users/mofumofu/review/text/text/images/logstash_config_input.png
 //}
 
@@ -64,7 +64,7 @@ filterは、ログをどのように加工・整形するか決める部分で�
 「加工」とはいっても、取り込んだログの文言を書き換える、条件に一致するログを消去する等
 方法は様々です。
 
-//image[logstash_config_filter][logstash.conf（filter）]{
+//image[logstash_config_filter][logstash.conf（filter）][scale=0.5]{
 /Users/mofumofu/review/text/text/images/logstash_config_filter.png
 //}
 
@@ -73,7 +73,7 @@ outputは、ログをどこに送るか指定する部分です。
 前の章でも述べた通り、Elasticsearchへのデータ送付以外にもCSV形式など
 指定した拡張子でデータを出力することも可能です。
 
-//image[logstash_config_output][logstash.conf（output）]{
+//image[logstash_config_output][logstash.conf（output）][scale=0.5]{
 /Users/mofumofu/review/text/text/images/logstash_config_output.png
 //}
 
