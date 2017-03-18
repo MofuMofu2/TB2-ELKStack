@@ -257,7 +257,9 @@ output {
 Elasticsearchはデータの持ち方が@<b>{field}に対する@<b>{text}という構造になっています。
 fieldとは、データベースでのカラムに相当します。textはカラムの中に入っている実データです。
 カラムの中にデータを入れるのと同じように、field内に実際のデータ（@<tt>{text})を保持します。
-このfieldの集まりを@<tt>{index}といいます。
+このfieldの集まりを@<tt>{index}といいます@<fn>{index}。
+
+//footnote[index][indexはよく「データベースではテーブルに相当する」と言われます。index設計は本が1冊できるほど奥が深いので、今回は扱いません。]
 
 デフォルトのindex名は@<tt>{"logstash-%{+YYYY.MM.dd\}"}です。
 @<tt>{elasticsearch}プラグインの@<tt>{index}を用いることでindex名を変更できます。
