@@ -376,17 +376,8 @@ output{
 === カラムのデータ型を変更する
 @<b>{convert}を使うと、@<tt>{column1}、@<tt>{column2}（以下略）内のデータ型を指定できます。
 @<code>{convert => { "column1" => "変更したい型" \} }のように記載します。変更できる型は
-@<table>{convertList}を参照してください。変更しない場合、全て文字型として扱われます。
-
-//table[convertList][convertオプションで変更できる型]{
-指定できるもの  データ型
-----------
-integer  数値
-float 浮動小数点数
-date  日付
-date_time 日付と時刻
-boolean boolean
-//}
+@<herf>{https://www.elastic.co/guide/en/logstash/current/plugins-filters-csv.html#plugins-filters-csv-convert}を
+参照してください。
 
 今回はcolumn2の中に日付と時刻が記載されているため、column2のみ型を変更します。
 //emlist[convertを記載したlogstash.conf]{

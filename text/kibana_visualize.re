@@ -23,22 +23,7 @@ Visualizeタブからグラフを作成します。上から2番目の@<b>{Visua
 Kibana上で作成できるようになるようです。時期は未定とのことですが、
 リリースされればリアルタイムデータを利用しながらプレゼンテーションできるようになりそうです。
 
-まずは、利用できるグラフの一覧を提示します。
-//table[kibana_kindOfChart][Kibanaで作成できるグラフの種類]{
-グラフ名  概要
-----------
-Area chart  塗りつぶし型の折れ線グラフ
-Data table  表
-Heartmap chart  心電図のようにデータの間隔を表示するグラフ
-Line chart  折れ線グラフ
-Markdown widget Markdown形式で好きに文字を書ける
-Pie chart 円グラフ
-Tag cloud キーワードを並べることができる
-Tile map  位置情報を世界地図にプロットする
-Timeseries  時間間隔を表示
-Vertical bar chart  棒グラフ
-//}
-
+Kibanaのグラフは拡張ができますが、デフォルトで用意されているものがありますので紹介します。
 
 === Area chart
 データ件数の数だけ塗りつぶして表示されます。SFの映画とかによく出てきそうなグラフですね。
@@ -61,10 +46,10 @@ Excelで開くと2byte文字は文字化けします@<fn>{byte}。
 
 === Heartmap chart
 心電図のように、指定したデータの出力感覚を表示することができます。
-データの出力感覚ごとにKibanaが自動で色分けをしてくれます@<fn>{Heartmap}。
+データの出力感覚ごとにKibanaが自動で色分けをしてくれます。
 
-//footnote[Heartmap][この本はモノクロ印刷のため、あまり特徴がわかりにくいと思います。
-今回は画面の紹介のみに留めますが、実際のグラフはGoogle先生に伺うとイメージつくはずです。]
+Heartmapのグラフ画像ですが、この本はモノクロ印刷のため、特徴がわかりにくいと思います。
+今回は画面の紹介のみに留めますので、実際のグラフはGoogle先生に伺ってみてください。
 
 //image[kibana_heartmapChart][Heartmap chart]{
  キャプチャを貼る
@@ -162,15 +147,8 @@ indexを選択すると、自動で円グラフが作成されます。
 まずはデータの数え方を決定しましょう。今回は@<tt>{Pie chart}用の設定を取り上げますが、
 基本的にはどのグラフであっても同じような内容を設定することになります。
 
-画面左上の@<tt>{Slice Size}をクリックします。3種類からデータの数え方を選択することができます。
-
-//table[kibana_sliceSize][Slice Sizeの種類]{
-Aggregation  Field
-----------
-Count  -
-Sum number型のfieldのみ選択可
-Unique Count  全てのfieldから選択可
-//}
+@<tt>{Count}（データ数）、@<tt>{Sum number}（型のfieldのみ選択可）、
+@<tt>{Unique Count}（全てのfieldから選択可）の3種類から選択します。
 
 データ件数を数えることができれば良い場合、@<tt>{Count}のままで良いです。
 この状態でカーソルを円グラフに当てると、データ件数やfield名が表示されます。
@@ -187,21 +165,7 @@ Unique Count  全てのfieldから選択可
 
 ==== Aggregation
 
-まずは、データの内訳方法を決めます。指定できる内訳方法は次の表を参照してください。
-
-//table[Aggregation][Aggregationの種類]{
-名前  データの内容
-----------
-Date Histogram  カラム2
-Histogram
-Range
-Date Range
-IPv4 Range
-Terms 指定したfield内のデータごとに円グラフの内訳を作成する
-Filters  自分で内訳の条件を決定する
-Significant Tearms
-//}
-
+まずは、データの内訳方法を決めます。
 今までの設定で作成したfieldごとにデータを分ける場合、Termsを選択します。
 詳細設定欄でfield名が選択できるようになりますので、そちらで好きなfieldを選択します。
 今回はfield名@<tt>{ @timestamp（つぶやいた時間）}を選択します。
@@ -218,15 +182,7 @@ Significant Tearms
 
 デフォルトではデータ数で数を並べ替えることができますが、他にも数のカウント方法を変更することができます。
 
-//table[OrderByList][Order Byの種類]{
-名前  内容  補足
-----------
-metric:Count  データ数による並び替え オプションなし
-Custom Metric データの平均など、自分で選択した数の数え方で並べ替え  Aggregationからデータのカウント方法を選択
-Term  field名の数で並び替え オプションなし
-//}
-
-====OrderとSize
+==== OrderとSize
 @<tt>{Ascending}を選択するとデータが@<b>{多い}順に@<tt>{Size}で指定した数のfieldの内訳が表示されます。
 @<tt>{Descending}を選択するとデータが@<b>{少ない}順に@<tt>{Size}で指定した数のfieldの内訳が表示されます。
 
