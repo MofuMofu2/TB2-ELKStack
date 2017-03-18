@@ -31,8 +31,8 @@ Visualizeで作成したグラフを一箇所にまとめて参照すること�
 Googleの画像検索で出てくるKibanaの画面は、Dashboardの画面が使われることが多いです。
 やはりグラフが集まっていると見栄えも良いですよね。
 
-//image[kibana_Dashboard][Dashboard画面の例]{
-  Discoverの画面キャプチャ
+//image[example_Dashboard][Dashboard画面の例]{
+  Dashboardの画面キャプチャ
 //}
 
 === Timelion：関数を定義してグラフを複数描画する
