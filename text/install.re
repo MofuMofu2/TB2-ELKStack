@@ -152,29 +152,6 @@ bin/elasticsearch -d
 
 //cmd{
 $ Elasticsearch-5.2.2 mofumofu$ bin/elasticsearch
-[2017-03-05T15:49:00,854][INFO ][o.e.n.Node               ] [] initializing ...
-[2017-03-05T15:49:01,004][INFO ][o.e.e.NodeEnvironment    ] [asgUjsK] using [1] data paths, mounts [[/ (/dev/disk1)]], net usable_space [123.8gb], net total_space [232.6gb], spins? [unknown], types [hfs]
-[2017-03-05T15:49:01,005][INFO ][o.e.e.NodeEnvironment    ] [asgUjsK] heap size [1.9gb], compressed ordinary object pointers [true]
-[2017-03-05T15:49:01,006][INFO ][o.e.n.Node               ] node name [asgUjsK] derived from node ID [asgUjsKwQg2H9BLGdc3J5A]; set [node.name] to override
-[2017-03-05T15:49:01,011][INFO ][o.e.n.Node               ] version[5.2.2], pid[1521], build[f9d9b74/2017-02-24T17:26:45.835Z], OS[Mac OS X/10.12.2/x86_64], JVM[Oracle Corporation/Java HotSpot(TM) 64-Bit Server VM/1.8.0_45/25.45-b02]
-[2017-03-05T15:49:04,176][INFO ][o.e.p.PluginsService     ] [asgUjsK] loaded module [aggs-matrix-stats]
-[2017-03-05T15:49:04,177][INFO ][o.e.p.PluginsService     ] [asgUjsK] loaded module [ingest-common]
-[2017-03-05T15:49:04,177][INFO ][o.e.p.PluginsService     ] [asgUjsK] loaded module [lang-expression]
-[2017-03-05T15:49:04,177][INFO ][o.e.p.PluginsService     ] [asgUjsK] loaded module [lang-groovy]
-[2017-03-05T15:49:04,177][INFO ][o.e.p.PluginsService     ] [asgUjsK] loaded module [lang-mustache]
-[2017-03-05T15:49:04,177][INFO ][o.e.p.PluginsService     ] [asgUjsK] loaded module [lang-painless]
-[2017-03-05T15:49:04,177][INFO ][o.e.p.PluginsService     ] [asgUjsK] loaded module [percolator]
-[2017-03-05T15:49:04,177][INFO ][o.e.p.PluginsService     ] [asgUjsK] loaded module [reindex]
-[2017-03-05T15:49:04,178][INFO ][o.e.p.PluginsService     ] [asgUjsK] loaded module [transport-netty3]
-[2017-03-05T15:49:04,178][INFO ][o.e.p.PluginsService     ] [asgUjsK] loaded module [transport-netty4]
-[2017-03-05T15:49:04,178][INFO ][o.e.p.PluginsService     ] [asgUjsK] no plugins loaded
-[2017-03-05T15:49:08,320][INFO ][o.e.n.Node               ] initialized
-[2017-03-05T15:49:08,320][INFO ][o.e.n.Node               ] [asgUjsK] starting ...
-[2017-03-05T15:49:08,528][INFO ][o.e.t.TransportService   ] [asgUjsK] publish_address {127.0.0.1:9300}, bound_addresses {[fe80::1]:9300}, {[::1]:9300}, {127.0.0.1:9300}
-[2017-03-05T15:49:11,619][INFO ][o.e.c.s.ClusterService   ] [asgUjsK] new_master {asgUjsK}{asgUjsKwQg2H9BLGdc3J5A}{r2ufo0xMTqSnm-4w0Huq9w}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-elected-as-master ([0] nodes joined)
-[2017-03-05T15:49:11,643][INFO ][o.e.h.HttpServer         ] [asgUjsK] publish_address {127.0.0.1:9200}, bound_addresses {[fe80::1]:9200}, {[::1]:9200}, {127.0.0.1:9200}
-[2017-03-05T15:49:11,643][INFO ][o.e.n.Node               ] [asgUjsK] started
-[2017-03-05T15:49:11,653][INFO ][o.e.g.GatewayService     ] [asgUjsK] recovered [0] indices into cluster_state
 //}
 
 === 動作確認
@@ -309,12 +286,6 @@ $ /bin/logstash -f logstash.conf
 
 //cmd{
 logstash-5.2.2 mofumofu$ bin/logstash -f logstash.conf
-Sending Logstash's logs to /Users/mallow/ELK_Stack/logstash-5.2.2/logs which is now configured via log4j2.properties
-[2017-03-05T16:22:40,422][INFO ][logstash.setting.writabledirectory] Creating directory {:setting=>"path.queue", :path=>"/Users/mallow/ELK_Stack/logstash-5.2.2/data/queue"}
-[2017-03-05T16:22:40,439][INFO ][logstash.agent           ] No persistent UUID file found. Generating new UUID {:uuid=>"ee122f82-747e-4d36-b851-322979edf3b6", :path=>"/Users/mallow/ELK_Stack/logstash-5.2.2/data/uuid"}
-[2017-03-05T16:22:40,817][INFO ][logstash.pipeline        ] Starting pipeline {"id"=>"main", "pipeline.workers"=>4, "pipeline.batch.size"=>125, "pipeline.batch.delay"=>5, "pipeline.max_inflight"=>500}
-[2017-03-05T16:22:40,858][INFO ][logstash.pipeline        ] Pipeline main started
-The stdin plugin is now waiting for input:
 
 # 標準入力で"hello world"を入力
 hello world
@@ -382,15 +353,6 @@ KibanaはElasticsearchと連動して動くアプリケーションなので、
 
 //cmd{
 kibana-5.2.2-darwin-x86_64 mofumofu$ bin/kibana
-  log   [07:46:54.934] [info][status][plugin:kibana@5.2.2] Status changed from uninitialized to green - Ready
-  log   [07:46:55.016] [info][status][plugin:Elasticsearch@5.2.2] Status changed from uninitialized to yellow - Waiting for Elasticsearch
-  log   [07:46:55.046] [info][status][plugin:console@5.2.2] Status changed from uninitialized to green - Ready
-  log   [07:46:55.900] [info][status][plugin:timelion@5.2.2] Status changed from uninitialized to green - Ready
-  log   [07:46:55.906] [info][listening] Server running at http://localhost:5601
-  log   [07:46:55.907] [info][status][ui settings] Status changed from uninitialized to yellow - Elasticsearch plugin is yellow
-  log   [07:47:00.943] [info][status][plugin:Elasticsearch@5.2.2] Status changed from yellow to yellow - No existing Kibana index found
-  log   [07:47:01.661] [info][status][plugin:Elasticsearch@5.2.2] Status changed from yellow to green - Kibana index ready
-  log   [07:47:01.662] [info][status][ui settings] Status changed from yellow to green - Ready
 //}
 
 起動後、ブラウザに@<href>{http://localhost:5601}と入力します。図X.Xのような画面が見えていればインストールは完了です。
